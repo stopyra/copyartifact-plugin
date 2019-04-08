@@ -860,6 +860,9 @@ public class CopyArtifact extends Builder implements SimpleBuildStep {
         public void buildEnvVars(AbstractBuild<?,?> build, EnvVars env) {
             if (data!=null) env.putAll(data);
         }
+        public void buildEnvironment(Run<?,?> run, EnvVars env) {
+            if (data!=null) env.putAll(data);
+        }
 
         public String getIconFileName() { return null; }
         public String getDisplayName() { return null; }
